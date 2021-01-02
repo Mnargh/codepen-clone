@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Editor from './Editor'
 
 function App() {
@@ -6,14 +6,27 @@ function App() {
   const [ html, setHtml] = useState('')
   const [ css, setCss] = useState('')
   const [ js, setJs] = useState('')
+  const [srcDoc, setSrcDoc] = useState('')
 
-  const srcDoc = `
-    <html>
-      <body>${html}</body>
-      <style>${css}</style>
-      <script>${js}</script>
-    </html>
-  `
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setSrcDoc(`
+        <html>
+          <body>${html}</body>
+          <style>${css}</style>
+          <script>${js}</script>
+        </html>
+      `
+      )
+    }, 250 );
+    // will trigger after component rendered, any time html/css/js changes only after a 250ms delay
+
+    return () => clearTimeout(timeout)
+    // cancles timeout update if srcDoc needs updating before timeout expires
+    // so only time setting srcdoc is if 250ms delay in typing
+  }, [html, css, js])
+  
+
 
   return (
     <>

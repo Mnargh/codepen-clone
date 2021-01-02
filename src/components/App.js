@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
+import { faAlignCenter } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
 
@@ -60,7 +61,6 @@ function App() {
           width="100%"
           height="100%"
           >
-
         </iframe>
       </div>
     </>

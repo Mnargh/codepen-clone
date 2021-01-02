@@ -32,7 +32,7 @@ export default function Editor( props ) {
           type='button'
           className='expand-collapse-btn'
           onClick={() => setOpen(prevOpen => !prevOpen)}>
-          
+
           <FontAwesomeIcon icon={open ? faCompressAlt : faExpandAlt} />
         </button>
       </div>
@@ -48,7 +48,6 @@ export default function Editor( props ) {
           lineNumbers: true
         }}
       />
-      Editor
     </div>
   )
 }

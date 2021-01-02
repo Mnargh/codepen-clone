@@ -7,6 +7,7 @@ body {
 }
 
 .pane {
+  background-color: hsl(225, 6%, 70%);
   height: 50vh;
   display: flex;
 }
@@ -23,21 +24,23 @@ body {
 }
 
 .expand-collapse-btn {
-  margin-left: 0.5rem;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 .editor-title {
   display: flex;
   justify-content: space-between;
   background-color: hsl(225, 6%, 13%);
-  color: white;
+  color: red;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
+  justify-content: center;
 }
 
 .editor-container.collapsed {

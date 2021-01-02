@@ -32,6 +32,10 @@ body {
   border-top-left-radius: 0.5rem;
 }
 
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+
 .CodeMirror {
   height: 100% !important;
   /* overides the default static height for CodeMirror */

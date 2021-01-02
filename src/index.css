@@ -36,6 +36,10 @@ body {
   flex-grow: 0;
 }
 
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+}
+
 .CodeMirror {
   height: 100% !important;
   /* overides the default static height for CodeMirror */

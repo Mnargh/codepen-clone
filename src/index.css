@@ -40,7 +40,6 @@ body {
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
-  justify-content: center;
 }
 
 .editor-container.collapsed {
